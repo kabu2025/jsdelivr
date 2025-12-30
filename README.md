@@ -27,3 +27,13 @@ http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg
     ```html
     <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.json"></script>
     ```
+
+2. 春节灯笼
+   - URL:
+    ```url
+    http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/yhpl.js
+    ```
+   - 示例代码：
+    ```html
+    <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/yhpl.js"></script>
+    ```
