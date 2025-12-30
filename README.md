@@ -28,7 +28,7 @@ http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg
     <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"></script>
     ```
 
-2. 春节灯笼
+2. 樱花飘落特效
    - URL:
     ```url
     http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/yhpl.js
@@ -36,4 +36,14 @@ http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg
    - 示例代码：
     ```html
     <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/yhpl.js"></script>
+    ```
+
+3. 满屏雪花飘落下雪
+   - URL:
+    ```url
+    http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js
+    ```
+   - 示例代码：
+    ```html
+    <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js"></script>
     ```
