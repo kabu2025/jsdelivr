@@ -7,6 +7,15 @@
 http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/logo/qq.png
 ```
 
+## IMG
+
+### JPG
+
+![/img/jpg/zsqqmusic.jpg](http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg)
+```url
+http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg
+```
+
 ## JS
 
 1. 春节灯笼
