@@ -46,4 +46,5 @@ http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg
    - 示例代码：
     ```html
     <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js"></script>
+    <script>var sf = new Snowflakes({color: "#FFC0CB"});</script>
     ```
