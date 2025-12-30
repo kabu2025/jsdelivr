@@ -20,7 +20,7 @@
 |----------|----------|----------|----------|
 | **春节灯笼** | 春节喜庆灯笼挂件特效 | `http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js` | ```<script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"></script> ``` |
 | **樱花飘落特效** | 樱花飘落动画效果 | `http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/yhpl.js` | ```<script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/yhpl.js"></script> ``` |
-| **满屏雪花飘落** | 冬季雪花飘落效果 | `http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js` | ```<script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js"></script>  <script>var sf = new Snowflakes({color: "#FFC0CB"});</script> ``` |
+| **满屏雪花飘落** | 冬季雪花飘落效果 | `http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js` | ```<script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js"></script>```<br>```<script>var sf = new Snowflakes({color: "#FFC0CB"});</script> ``` |
 
 ---
 
