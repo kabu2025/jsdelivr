@@ -21,11 +21,11 @@ http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg
 1. 春节灯笼
    - URL:
     ```url
-    http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.json
+    http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js
     ```
    - 示例代码：
     ```html
-    <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.json"></script>
+    <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"></script>
     ```
 
 2. 春节灯笼
