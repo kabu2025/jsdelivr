@@ -6,6 +6,10 @@
 ```url
 http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/logo/qq.png
 ```
+![/ico/favicon.ico](http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/favicon.ico)
+```url
+http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/favicon.ico
+```
 
 ## IMG
 
