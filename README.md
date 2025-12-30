@@ -1,54 +1,37 @@
-## ICO
+## 📁 资源列表
 
-### LOGO
+以下是本仓库中所有图片、图标和脚本资源的汇总表，包含预览、直链地址和使用示例。
 
-![/ico/logo/qq.png](http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/logo/qq.png)
-```url
-http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/logo/qq.png
-```
-![/ico/favicon.ico](http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/favicon.ico)
-```url
-http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/favicon.ico
-```
+---
 
-## IMG
+### 🖼️ 图标与图片
 
-### JPG
+| 类型 | 预览 | 直链地址 | 引用示例 |
+|------|------|----------|----------|
+| **ICO / LOGO** | <img src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/logo/qq.png" width="60" alt="qq.png"> | `http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/logo/qq.png`<br> <!-- 点击右侧复制按钮：📋 --> | 无 |
+| **ICO / Favicon** | <img src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/favicon.ico" width="60" alt="favicon.ico"> | `http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/favicon.ico`<br> <!-- 点击右侧复制按钮：📋 --> | 无 |
+| **JPG / 图片** | <img src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg" width="120" alt="zsqqmusic.jpg"> | `http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg`<br> <!-- 点击右侧复制按钮：📋 --> | 无 |
 
-![/img/jpg/zsqqmusic.jpg](http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg)
-```url
-http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/img/jpg/zsqqmusic.jpg
-```
+---
 
-## JS
+### 📜 脚本资源
 
-1. 春节灯笼
-   - URL:
-    ```url
-    http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js
-    ```
-   - 示例代码：
-    ```html
-    <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"></script>
-    ```
+| 脚本名称 | 功能简介 | 直链地址 | 引用示例 |
+|----------|----------|----------|----------|
+| **春节灯笼** | 春节喜庆灯笼挂件特效 | `http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js`<br> <!-- 点击右侧复制按钮：📋 --> | ```html <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"></script> ```<br> <!-- 点击右侧复制按钮：📋 --> |
+| **樱花飘落特效** | 樱花飘落动画效果 | `http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/yhpl.js`<br> <!-- 点击右侧复制按钮：📋 --> | ```html <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/yhpl.js"></script> ```<br> <!-- 点击右侧复制按钮：📋 --> |
+| **满屏雪花飘落** | 冬季雪花飘落效果 | `http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js`<br> <!-- 点击右侧复制按钮：📋 --> | ```html <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js"></script> <script>var sf = new Snowflakes({color: "#FFC0CB"});</script> ```<br> <!-- 点击右侧复制按钮：📋 --> |
 
-2. 樱花飘落特效
-   - URL:
-    ```url
-    http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/yhpl.js
-    ```
-   - 示例代码：
-    ```html
-    <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/yhpl.js"></script>
-    ```
+---
 
-3. 满屏雪花飘落下雪
-   - URL:
-    ```url
-    http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js
-    ```
-   - 示例代码：
-    ```html
-    <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/snow.js"></script>
-    <script>var sf = new Snowflakes({color: "#FFC0CB"});</script>
-    ```
+### 📌 使用说明
+
+1. **复制直链**：点击表格中的“📋”提示位置右侧的代码块，手动复制链接。
+2. **引用脚本**：将“引用示例”中的代码插入到你的 HTML 文件中即可使用。
+3. **图片使用**：可直接在 Markdown 或 HTML 中使用上述图片链接。
+
+> ✅ 提示：所有资源已托管于 jsDelivr CDN，支持快速访问与加速。
+
+---
+
+如果你觉得这个项目对你有帮助，欢迎 Star ⭐ 或 Fork！
