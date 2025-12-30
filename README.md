@@ -1,6 +1,6 @@
-## ICO
+## **ICO**
 
-### LOGO
+### **LOGO**
 
 ![/ico/logo/qq.png](http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/ico/logo/qq.png)
 ```url
