@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>代码预览与复制</title>
+    <title>cjdl - 预览</title>
     <style>
-        /* 页面整体：深色背景 */
+        /* 页面整体布局 */
         body {
             margin: 0;
             padding: 0;
@@ -13,22 +14,24 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ffffff; /* 极深灰蓝色背景 */
+            background-color: #f4f4f4;
+            /* 浅色背景衬托深色代码框 */
             font-family: 'Fira Code', 'Consolas', monospace;
         }
 
-        /* 增大加宽的容器 */
+        /* 代码容器 */
         .code-wrapper {
-            width: 85%;            /* 占用屏幕宽度的 85% */
-            max-width: 1200px;     /* 最大宽度限制 */
-            background: #050505;   /* 纯黑背景 */
-            border: 1px solid #333; /* 细微边框感 */
+            width: 85%;
+            max-width: 1200px;
+            background: #050505;
+            /* 纯黑背景 */
             border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
             overflow: hidden;
+            border: 1px solid #333;
         }
 
-        /* 头部控制栏 */
+        /* 头部栏 */
         .code-header {
             background: #1a1a1a;
             padding: 15px 25px;
@@ -40,12 +43,11 @@
 
         .title {
             color: #888;
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 1px;
-            text-transform: uppercase;
         }
 
-        /* 复制按钮样式 */
+        /* 复制按钮 */
         .copy-btn {
             background: #2d2d2d;
             color: #ccc;
@@ -54,18 +56,12 @@
             border-radius: 6px;
             cursor: pointer;
             font-size: 13px;
-            transition: all 0.2s ease;
-            outline: none;
+            transition: all 0.2s;
         }
 
         .copy-btn:hover {
             background: #3d3d3d;
-            border-color: #666;
             color: #fff;
-        }
-
-        .copy-btn:active {
-            transform: scale(0.95);
         }
 
         .copy-btn.success {
@@ -74,68 +70,98 @@
             border-color: #2d6a4f;
         }
 
-        /* 增大加高的代码展示区 */
+        /* 代码展示区 */
         .code-body {
-            padding: 40px;      /* 增加内边距，更有呼吸感 */
-            min-height: 200px;  /* 最小高度 */
-            max-height: 60vh;   /* 超过高度自动滚动 */
+            padding: 30px 20px;
+            max-height: 60vh;
             overflow: auto;
-            position: relative;
         }
 
         pre {
             margin: 0;
-            white-space: pre-wrap;
-            word-break: break-all;
+            counter-reset: line-numbering;
+            /* 初始化行号计数器 */
         }
 
         code {
-            color: #00ff9d;    /* 荧光绿代码色，在暗色背景下非常显眼 */
-            font-size: 18px;   /* 增大字号 */
-            line-height: 1.6;
+            color: #00ff9d;
+            /* 荧光绿 */
+            font-size: 18px;
+            line-height: 1.8;
+            display: block;
         }
 
-        /* 滚动条美化 (针对 Chrome/Edge) */
+        /* 行号逻辑实现 */
+        .line {
+            display: block;
+            position: relative;
+            padding-left: 3.5em;
+            /* 为行号留出空间 */
+        }
+
+        .line::before {
+            content: counter(line-numbering);
+            counter-increment: line-numbering;
+            position: absolute;
+            left: 0;
+            width: 2.5em;
+            text-align: right;
+            color: #444;
+            /* 行号颜色较暗 */
+            user-select: none;
+            /* 防止行号被选中 */
+            font-size: 16px;
+            border-right: 1px solid #222;
+            padding-right: 1em;
+        }
+
+        /* 滚动条美化 */
         .code-body::-webkit-scrollbar {
             width: 8px;
         }
+
         .code-body::-webkit-scrollbar-thumb {
             background: #333;
             border-radius: 4px;
         }
     </style>
 </head>
+
 <body>
-<script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"></script> 
-<div class="code-wrapper">
-    <div class="code-header">
-        <div class="title">Reference Script</div>
-        <button class="copy-btn" id="copyBtn" onclick="copyCode()">复制链接</button>
+
+    <script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"></script>
+    
+    <div class="code-wrapper">
+        <div class="code-header">
+            <div class="title">INSTALLATION GUIDE</div>
+            <button class="copy-btn" id="copyBtn" onclick="copyCode()">一键复制全部</button>
+        </div>
+        <div class="code-body">
+            <pre><code id="codeBlock"><span class="line">&lt;script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"&gt;&lt;/script&gt;</span></code></pre>
+        </div>
     </div>
-    <div class="code-body">
-<pre><code id="codeBlock">&lt;script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"&gt;&lt;/script&gt;</code></pre>
-    </div>
-</div>
 
-<script>
-    function copyCode() {
-        const codeText = document.getElementById('codeBlock').innerText;
-        const btn = document.getElementById('copyBtn');
+    <script>
+        function copyCode() {
+            // 获取内容时，innerText 会自动处理换行
+            const codeText = document.getElementById('codeBlock').innerText;
+            const btn = document.getElementById('copyBtn');
 
-        navigator.clipboard.writeText(codeText).then(() => {
-            const originalText = btn.innerText;
-            btn.innerText = '✓ 已复制';
-            btn.classList.add('success');
+            navigator.clipboard.writeText(codeText).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = '✓ 已复制到剪贴板';
+                btn.classList.add('success');
 
-            setTimeout(() => {
-                btn.innerText = originalText;
-                btn.classList.remove('success');
-            }, 2000);
-        }).catch(err => {
-            alert('复制失败，请手动选择');
-        });
-    }
-</script>
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('success');
+                }, 2000);
+            }).catch(err => {
+                console.error('复制失败', err);
+            });
+        }
+    </script>
 
 </body>
+
 </html>
