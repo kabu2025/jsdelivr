@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代码预览与复制</title>
+    <style>
+        /* 页面整体：深色背景 */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff; /* 极深灰蓝色背景 */
+            font-family: 'Fira Code', 'Consolas', monospace;
+        }
+
+        /* 增大加宽的容器 */
+        .code-wrapper {
+            width: 85%;            /* 占用屏幕宽度的 85% */
+            max-width: 1200px;     /* 最大宽度限制 */
+            background: #050505;   /* 纯黑背景 */
+            border: 1px solid #333; /* 细微边框感 */
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        /* 头部控制栏 */
+        .code-header {
+            background: #1a1a1a;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .title {
+            color: #888;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* 复制按钮样式 */
+        .copy-btn {
+            background: #2d2d2d;
+            color: #ccc;
+            border: 1px solid #444;
+            padding: 8px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        .copy-btn:hover {
+            background: #3d3d3d;
+            border-color: #666;
+            color: #fff;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+
+        .copy-btn.success {
+            background: #1b4332;
+            color: #74c69d;
+            border-color: #2d6a4f;
+        }
+
+        /* 增大加高的代码展示区 */
+        .code-body {
+            padding: 40px;      /* 增加内边距，更有呼吸感 */
+            min-height: 200px;  /* 最小高度 */
+            max-height: 60vh;   /* 超过高度自动滚动 */
+            overflow: auto;
+            position: relative;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        code {
+            color: #00ff9d;    /* 荧光绿代码色，在暗色背景下非常显眼 */
+            font-size: 18px;   /* 增大字号 */
+            line-height: 1.6;
+        }
+
+        /* 滚动条美化 (针对 Chrome/Edge) */
+        .code-body::-webkit-scrollbar {
+            width: 8px;
+        }
+        .code-body::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"></script> 
+<div class="code-wrapper">
+    <div class="code-header">
+        <div class="title">Reference Script</div>
+        <button class="copy-btn" id="copyBtn" onclick="copyCode()">复制链接</button>
+    </div>
+    <div class="code-body">
+<pre><code id="codeBlock">&lt;script src="http://cdn.jsdelivr.net/gh/kabu2025/jsdelivr@main/js/cjdl.js"&gt;&lt;/script&gt;</code></pre>
+    </div>
+</div>
+
+<script>
+    function copyCode() {
+        const codeText = document.getElementById('codeBlock').innerText;
+        const btn = document.getElementById('copyBtn');
+
+        navigator.clipboard.writeText(codeText).then(() => {
+            const originalText = btn.innerText;
+            btn.innerText = '✓ 已复制';
+            btn.classList.add('success');
+
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.remove('success');
+            }, 2000);
+        }).catch(err => {
+            alert('复制失败，请手动选择');
+        });
+    }
+</script>
+
+</body>
+</html>
